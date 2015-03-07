@@ -1,0 +1,7 @@
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\bin\Debug\BeetrootSoup.MonogameToolkit.dll
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\bin\Debug\BeetrootSoup.MonogameToolkit.pdb
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\obj\Debug\BeetrootSoup.MonogameToolkit.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\obj\Debug\BeetrootSoup.MonogameToolkit.dll
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\obj\Debug\BeetrootSoup.MonogameToolkit.pdb
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\bin\Debug\MonoGame.Framework.dll
+E:\Documents\GitHub\BeetrootSoup.MonogameToolkit\BeetrootSoup.MonogameToolkit\bin\Debug\MonoGame.Framework.xml
