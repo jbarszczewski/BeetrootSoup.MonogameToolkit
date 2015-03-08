@@ -30,7 +30,8 @@ namespace BeetrootSoup.MonogameToolkit.Layout
 
         public override void Draw(GameTime gameTime)
         {
-            this.spriteBatch.Begin(SpriteSortMode.Immediate, transformMatrix: this.Camera.TranslationMatrix);
+            //this.spriteBatch.Begin(SpriteSortMode.Immediate, transformMatrix: this.Camera.TranslationMatrix);
+            this.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise, null, this.Camera.TranslationMatrix);
             foreach (var effect in this.effects)
             {
                 effect.CurrentTechnique.Passes[0].Apply();
