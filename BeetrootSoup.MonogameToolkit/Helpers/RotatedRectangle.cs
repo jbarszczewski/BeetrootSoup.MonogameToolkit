@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BeetrootSoup.MGToolkit
+namespace BeetrootSoup.MonogameToolkit.Helpers
 {
     public class RotatedRectangle
     {
@@ -19,6 +19,12 @@ namespace BeetrootSoup.MGToolkit
             //Calculate the Rectangles origin. We assume the center of the Rectangle will
             //be the point that we will be rotating around and we use that for the origin
             Origin = new Vector2(rectangle.Width / 2, rectangle.Height / 2);
+        }
+
+        public void ChangePosition(Vector2 newPosition)
+        {
+            this.CollisionRectangle.X = (int)newPosition.X;
+            this.CollisionRectangle.Y = (int)newPosition.Y;
         }
 
         /// <summary>

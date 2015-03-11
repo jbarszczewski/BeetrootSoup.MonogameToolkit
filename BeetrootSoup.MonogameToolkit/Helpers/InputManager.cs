@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
-namespace BeetrootSoup.MGToolkit
+namespace BeetrootSoup.MonogameToolkit.Helpers
 {
     public static class InputHelper
     {

@@ -6,14 +6,19 @@
 
     public abstract class Node
     {
-        public Vector2 RelativePosition { get; set; }
-        public float Rotation { get; set; }
+        public Vector2 RelativePosition;
+        public float Rotation;
         public Node Owner { get; set; }
         public IList<Node> Nodes { get; set; }
 
+         public Vector2 LinearVelocity;
+        public float AngularVelocity;
+        
         protected Node()
         {
             this.Nodes = new List<Node>();
+            this.LinearVelocity = Vector2.Zero;
+            this.AngularVelocity = 0f;
         }
 
         public void AddNode(Node node)
@@ -22,10 +27,18 @@
             node.Owner = this;
         }
 
-        public void RemoveNode(Node node)
+        public void RemoveNode(Node node, bool recursively = false)
         {
-            node.Owner = null;
+            if (recursively)
+            {
+                foreach (var innerNode in this.Nodes)
+                {
+                    innerNode.RemoveNode(node, recursively);
+                }
+            }
+
             this.Nodes.Remove(node);
+            node.Owner = null;
         }
 
         public Vector2 GetAbsolutePosition()
@@ -60,6 +73,10 @@
 
         public virtual void Update(GameTime gameTime)
         {
+            this.RelativePosition.X += this.LinearVelocity.X;
+            this.RelativePosition.Y += this.LinearVelocity.Y;
+            this.Rotation += this.AngularVelocity;
+
             foreach (var node in this.Nodes)
             {
                 node.Update(gameTime);

@@ -1,6 +1,6 @@
 ﻿namespace BeetrootSoup.MonogameToolkit.Layout
 {
-    using BeetrootSoup.MGToolkit;
+    using BeetrootSoup.MonogameToolkit.Helpers;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
@@ -53,7 +53,6 @@
 
         public override void Update(GameTime gameTime)
         {
-            base.Update(gameTime);
             if (this.BoundingRectangle != null)
             {
                 var absolutePosition = this.GetAbsolutePosition();
@@ -63,6 +62,8 @@
                 this.BoundingRectangle.CollisionRectangle.Width = (int)(this.Texture.Height * this.Scale.Y);
                 this.BoundingRectangle.Rotation = this.GetAbsoluteRotation();
             }
+
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
@@ -73,6 +74,8 @@
                 rotation: base.GetAbsoluteRotation(),
                 scale: this.Scale,
                 origin: new Vector2(this.Texture.Width / 2f, this.Texture.Height / 2f));
+
+            base.Draw(gameTime);
         }
     }
 }
