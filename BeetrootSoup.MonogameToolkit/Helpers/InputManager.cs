@@ -53,5 +53,15 @@ namespace BeetrootSoup.MonogameToolkit.Helpers
 
             return new GestureSample();
         }
+
+        public static bool WasKeyPressed(Keys key)
+        {
+            return PreviousKeyboardState.IsKeyUp(key) && CurrentKeyboardState.IsKeyDown(key);
+        }
+
+        public static bool WasKeyReleased(Keys key)
+        {
+            return PreviousKeyboardState.IsKeyDown(key) && CurrentKeyboardState.IsKeyUp(key);
+        }
     }
 }
