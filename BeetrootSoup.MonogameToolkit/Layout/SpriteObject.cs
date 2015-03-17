@@ -28,11 +28,12 @@
             {
                 this.texture = value;
                 var absolutePosition = this.GetAbsolutePosition();
-                this.BoundingRectangle = new RotatedRectangle(new Rectangle( (int)absolutePosition.X, (int)absolutePosition.Y, this.Texture.Width, this.Texture.Height), this.GetAbsoluteRotation());
+                this.ColisionRectangle = new RotatedRectangle(new Rectangle( (int)absolutePosition.X, (int)absolutePosition.Y, this.Texture.Width, this.Texture.Height), this.GetAbsoluteRotation());
+                this.ColisionRectangle.Origin = new Vector2(this.Texture.Width / 2f, this.Texture.Height / 2f);
             }
         }
 
-        public RotatedRectangle BoundingRectangle { get; set; }
+        public RotatedRectangle ColisionRectangle { get; set; }
 
         public Vector2 Scale
         {
@@ -43,24 +44,25 @@
             set
             {
                 this.scale = value;
-                if (this.BoundingRectangle != null)
+                if (this.ColisionRectangle != null)
                 {
-                    this.BoundingRectangle.CollisionRectangle.Width = (int)(this.Texture.Width * this.Scale.X);
-                    this.BoundingRectangle.CollisionRectangle.Width = (int)(this.Texture.Height * this.Scale.Y);
+                    this.ColisionRectangle.CollisionRectangle.Width = (int)(this.Texture.Width * this.Scale.X);
+                    this.ColisionRectangle.CollisionRectangle.Height = (int)(this.Texture.Height * this.Scale.Y);
+                    this.ColisionRectangle.Origin = new Vector2(this.Texture.Width * this.Scale.X / 2f, this.Texture.Height * this.Scale.Y / 2f);
                 }
             }
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (this.BoundingRectangle != null)
+            if (this.ColisionRectangle != null)
             {
                 var absolutePosition = this.GetAbsolutePosition();
-                this.BoundingRectangle.CollisionRectangle.X = (int)absolutePosition.X;
-                this.BoundingRectangle.CollisionRectangle.Y = (int)absolutePosition.Y;
-                this.BoundingRectangle.CollisionRectangle.Width = (int)(this.Texture.Width * this.Scale.X);
-                this.BoundingRectangle.CollisionRectangle.Width = (int)(this.Texture.Height * this.Scale.Y);
-                this.BoundingRectangle.Rotation = this.GetAbsoluteRotation();
+                this.ColisionRectangle.CollisionRectangle.X = (int)absolutePosition.X;
+                this.ColisionRectangle.CollisionRectangle.Y = (int)absolutePosition.Y;
+                this.ColisionRectangle.CollisionRectangle.Width = (int)(this.Texture.Width * this.Scale.X);
+                this.ColisionRectangle.CollisionRectangle.Height = (int)(this.Texture.Height * this.Scale.Y);
+                this.ColisionRectangle.Rotation = this.GetAbsoluteRotation();
             }
 
             base.Update(gameTime);
