@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\cocossharp_sandbox\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,12 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\RandomGeneratorHelper.cs" />
+    <Compile Include="Helpers\Serialization.cs" />
     <Compile Include="Layout\ComplexObject.cs" />
     <Compile Include="Layout\DynamicCamera.cs" />
     <Compile Include="Helpers\FrameCounter.cs" />
     <Compile Include="Helpers\InputManager.cs" />
     <Compile Include="Layout\Layer.cs" />
     <Compile Include="Layout\Node.cs" />
+    <Compile Include="Layout\TextureSerializationConverter.cs" />
     <Compile Include="Particles\Particle.cs" />
     <Compile Include="Particles\ParticleEmitter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

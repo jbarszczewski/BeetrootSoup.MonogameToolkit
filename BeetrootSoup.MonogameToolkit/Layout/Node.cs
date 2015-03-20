@@ -4,6 +4,8 @@
     using System;
     using System.Collections.Generic;
 
+    using Newtonsoft.Json;
+
     public abstract class Node
     {
         public Vector2 RelativePosition;

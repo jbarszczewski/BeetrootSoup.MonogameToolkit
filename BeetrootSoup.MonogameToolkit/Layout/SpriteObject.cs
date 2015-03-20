@@ -4,6 +4,8 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
+    using Newtonsoft.Json;
+
     public class SpriteObject : Node
     {
         private readonly SpriteBatch spriteBatch;
@@ -18,6 +20,7 @@
             this.Scale = Vector2.One;
         }
 
+        //[JsonConverter(typeof(TextureSerializationConverter))]
         public Texture2D Texture
         {
             get
