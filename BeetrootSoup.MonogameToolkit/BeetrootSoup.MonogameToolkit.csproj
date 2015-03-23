@@ -48,14 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\RandomGeneratorHelper.cs" />
-    <Compile Include="Helpers\Serialization.cs" />
+    <Compile Include="Serialization\NodeDefinition.cs" />
+    <Compile Include="Serialization\Serialization.cs" />
     <Compile Include="Layout\ComplexObject.cs" />
     <Compile Include="Layout\DynamicCamera.cs" />
     <Compile Include="Helpers\FrameCounter.cs" />
     <Compile Include="Helpers\InputManager.cs" />
     <Compile Include="Layout\Layer.cs" />
     <Compile Include="Layout\Node.cs" />
-    <Compile Include="Layout\TextureSerializationConverter.cs" />
     <Compile Include="Particles\Particle.cs" />
     <Compile Include="Particles\ParticleEmitter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

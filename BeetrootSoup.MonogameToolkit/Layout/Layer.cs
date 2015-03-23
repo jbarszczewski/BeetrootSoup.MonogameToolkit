@@ -8,31 +8,31 @@ namespace BeetrootSoup.MonogameToolkit.Layout
     public class Layer : Node
     {
         private readonly SpriteBatch spriteBatch;
-        private readonly IList<Effect> effects;
+        internal readonly IList<Effect> Effects;
 
         public DynamicCamera Camera { get; set; }
 
         public Layer(SpriteBatch spriteBatch)
         {
             this.spriteBatch = spriteBatch;
-            this.effects = new List<Effect>();
+            this.Effects = new List<Effect>();
         }
 
         public void AddEffect(Effect effect)
         {
-            this.effects.Add(effect);
+            this.Effects.Add(effect);
         }
         
         public void RemoveEffect(Effect effect)
         {
-            this.effects.Remove(effect);
+            this.Effects.Remove(effect);
         }
 
         public override void Draw(GameTime gameTime)
         {
             //this.spriteBatch.Begin(SpriteSortMode.Immediate, transformMatrix: this.Camera.TranslationMatrix);
             this.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise, null, this.Camera != null ? this.Camera.TranslationMatrix : new Matrix());
-            foreach (var effect in this.effects)
+            foreach (var effect in this.Effects)
             {
                 effect.CurrentTechnique.Passes[0].Apply();
             }
