@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeetrootSoup.MonogameToolkit.Helpers
 {
@@ -26,9 +22,19 @@ namespace BeetrootSoup.MonogameToolkit.Helpers
             return new Vector2(GetRandomFloat(xMin, xMax), GetRandomFloat(yMin, yMax));
         }
 
+        public static Vector2 GetRandomVector2(float maxVariation)
+        {
+            return GetRandomVector2(-maxVariation, maxVariation, -maxVariation, maxVariation);
+        }
+
         public static int GetRandomInt(int iMin, int iMax)
         {
             return random.Next(iMin, iMax);
+        }
+
+        public static int GetRandomSignFloat()
+        {
+            return random.NextDouble() > 0.5 ? 1 : -1;
         }
     }
 }

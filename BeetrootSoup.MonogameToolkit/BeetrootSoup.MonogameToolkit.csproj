@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\AnotherMathHelper.cs" />
     <Compile Include="Helpers\RandomGeneratorHelper.cs" />
+    <Compile Include="Particles\BurstParticleEmmiter.cs" />
     <Compile Include="Serialization\NodeDefinition.cs" />
     <Compile Include="Serialization\Serialization.cs" />
     <Compile Include="Layout\ComplexObject.cs" />
