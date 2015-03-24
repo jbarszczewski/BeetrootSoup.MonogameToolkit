@@ -18,8 +18,6 @@
 
         private readonly float particleLifetime;
 
-        private readonly float emitTime;
-
         private readonly float speed;
 
         private readonly float speedVariation;
@@ -28,14 +26,13 @@
 
         private readonly Vector2 accelerationThreshold;
 
-        public BurstParticleEmmiter(SpriteBatch spriteBatch, Texture2D particleTexture, int numberOfParticles, float particleLifetime, float emitTime, float speed, float speedVariation, float acceleration, Vector2 accelerationThreshold, float scale = 1f)
+        public BurstParticleEmmiter(SpriteBatch spriteBatch, Texture2D particleTexture, int numberOfParticles, float particleLifetime, float speed, float speedVariation, float acceleration, Vector2 accelerationThreshold, float scale = 1f)
             : base(spriteBatch)
         {
             this.particleTexture = particleTexture;
             this.scale = scale;
             this.numberOfParticles = numberOfParticles;
             this.particleLifetime = particleLifetime;
-            this.emitTime = emitTime;
             this.speed = speed;
             this.speedVariation = speedVariation;
             this.acceleration = acceleration;
