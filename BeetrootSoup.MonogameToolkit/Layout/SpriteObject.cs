@@ -61,8 +61,8 @@
             if (this.ColisionRectangle != null)
             {
                 var absolutePosition = this.GetAbsolutePosition();
-                this.ColisionRectangle.CollisionRectangle.X = (int)absolutePosition.X;
-                this.ColisionRectangle.CollisionRectangle.Y = (int)absolutePosition.Y;
+                this.ColisionRectangle.CollisionRectangle.X = (int)absolutePosition.X - (this.Texture.Width / 2);
+                this.ColisionRectangle.CollisionRectangle.Y = (int)absolutePosition.Y - (this.Texture.Height / 2);
                 this.ColisionRectangle.CollisionRectangle.Width = (int)(this.Texture.Width * this.Scale.X);
                 this.ColisionRectangle.CollisionRectangle.Height = (int)(this.Texture.Height * this.Scale.Y);
                 this.ColisionRectangle.Rotation = this.GetAbsoluteRotation();

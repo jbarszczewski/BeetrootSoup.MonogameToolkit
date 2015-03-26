@@ -23,8 +23,8 @@ namespace BeetrootSoup.MonogameToolkit.Helpers
 
         public void ChangePosition(Vector2 newPosition)
         {
-            this.CollisionRectangle.X = (int)newPosition.X;
-            this.CollisionRectangle.Y = (int)newPosition.Y;
+            this.CollisionRectangle.X = (int)newPosition.X; //- (this.CollisionRectangle.Width / 2);
+            this.CollisionRectangle.Y = (int)newPosition.Y; // -(this.CollisionRectangle.Height / 2);
         }
 
         /// <summary>
