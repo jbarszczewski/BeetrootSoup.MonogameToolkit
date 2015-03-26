@@ -9,16 +9,23 @@
     public abstract class Node
     {
         public Vector2 RelativePosition;
-        public float Rotation;
-        public Node Owner { get; set; }
-        public IList<Node> Nodes { get; set; }
 
-         public Vector2 LinearVelocity;
+        public float Rotation;
+
+        public Vector2 LinearVelocity;
+
         public float AngularVelocity;
-        
+
+        public string Tag;
+
+        public Node Owner { get; set; }
+        public IList<Node> Nodes { get; private set; }
+
         protected Node()
         {
             this.Nodes = new List<Node>();
+            this.RelativePosition = Vector2.Zero;
+            this.Rotation = 0f;
             this.LinearVelocity = Vector2.Zero;
             this.AngularVelocity = 0f;
         }
