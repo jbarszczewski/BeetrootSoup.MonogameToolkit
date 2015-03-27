@@ -1,14 +1,13 @@
-﻿namespace BeetrootSoup.MonogameToolkit.Helpers
+﻿namespace BeetrootSoup.MonogameToolkit.Serialization
 {
     using BeetrootSoup.MonogameToolkit.Layout;
-    using BeetrootSoup.MonogameToolkit.Serialization;
 
     using Microsoft.Xna.Framework.Graphics;
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
 
-    public static class Serialization
+    public static class Serializer
     {
         public static IDictionary<string,Texture2D> Textures;
 
@@ -18,7 +17,7 @@
 
         public static SpriteBatch SpriteBatch;
 
-        static Serialization()
+        static Serializer()
         {
             Textures = new Dictionary<string, Texture2D>();
             Effects = new Dictionary<string, Effect>();
