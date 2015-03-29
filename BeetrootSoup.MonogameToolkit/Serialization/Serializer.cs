@@ -36,6 +36,7 @@
         {
             var result = new NodeDefinition
                              {
+                                 Tag = node.Tag,
                                  Position = node.RelativePosition,
                                  Rotation = node.Rotation,
                                  LinearVelocity = node.LinearVelocity,
@@ -118,6 +119,7 @@
                     throw new TypeInitializationException(nodeDefinition.Type, null);
             }
 
+            result.Tag = nodeDefinition.Tag;
             result.RelativePosition = nodeDefinition.Position;
             result.Rotation = nodeDefinition.Rotation;
             result.LinearVelocity = nodeDefinition.LinearVelocity;

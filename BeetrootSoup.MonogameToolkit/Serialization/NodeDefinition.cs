@@ -9,6 +9,8 @@
 
         public string Name;
 
+        public string Tag;
+
         public Vector2 Position;
 
         public float Rotation;
