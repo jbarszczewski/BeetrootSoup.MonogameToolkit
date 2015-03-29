@@ -51,7 +51,7 @@
     <Compile Include="Helpers\TextureGenerator.cs" />
     <Compile Include="Particles\BurstParticleEmmiter.cs" />
     <Compile Include="Serialization\NodeDefinition.cs" />
-    <Compile Include="Serialization\Serialization.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
     <Compile Include="Layout\ComplexObject.cs" />
     <Compile Include="Layout\DynamicCamera.cs" />
     <Compile Include="Helpers\FrameCounter.cs" />
