@@ -49,6 +49,7 @@
     <Compile Include="Helpers\AnotherMathHelper.cs" />
     <Compile Include="Helpers\RandomGeneratorHelper.cs" />
     <Compile Include="Helpers\TextureGenerator.cs" />
+    <Compile Include="Layout\CollisionObject.cs" />
     <Compile Include="Particles\BurstParticleEmmiter.cs" />
     <Compile Include="Serialization\NodeDefinition.cs" />
     <Compile Include="Serialization\Serializer.cs" />
