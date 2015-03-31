@@ -1,5 +1,7 @@
 ﻿namespace BeetrootSoup.MonogameToolkit.Layout
 {
+    using BeetrootSoup.MonogameToolkit.Movement;
+
     using Microsoft.Xna.Framework;
     using System;
     using System.Collections.Generic;
@@ -11,6 +13,8 @@
         public Vector2 RelativePosition;
 
         public float Rotation;
+
+        public IMovementPattern MovementPattern;
 
         public Vector2 LinearVelocity;
 
@@ -82,6 +86,13 @@
 
         public virtual void Update(GameTime gameTime)
         {
+            if (this.MovementPattern != null)
+            {
+                var movement = this.MovementPattern.GetPosition(gameTime);
+                this.RelativePosition.X += movement.X;
+                this.RelativePosition.Y += movement.Y;
+            }
+
             this.RelativePosition.X += this.LinearVelocity.X;
             this.RelativePosition.Y += this.LinearVelocity.Y;
             this.Rotation += this.AngularVelocity;

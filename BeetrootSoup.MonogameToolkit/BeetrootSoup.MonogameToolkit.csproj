@@ -50,6 +50,8 @@
     <Compile Include="Helpers\RandomGeneratorHelper.cs" />
     <Compile Include="Helpers\TextureGenerator.cs" />
     <Compile Include="Layout\CollisionObject.cs" />
+    <Compile Include="Movement\IMovementPattern.cs" />
+    <Compile Include="Movement\LinearMovement.cs" />
     <Compile Include="Particles\BurstParticleEmmiter.cs" />
     <Compile Include="Serialization\NodeDefinition.cs" />
     <Compile Include="Serialization\Serializer.cs" />

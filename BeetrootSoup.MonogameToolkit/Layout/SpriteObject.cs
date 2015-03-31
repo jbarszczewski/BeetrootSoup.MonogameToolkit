@@ -31,12 +31,14 @@
             {
                 this.texture = value;
                 var absolutePosition = this.GetAbsolutePosition();
-                this.ColisionRectangle = new RotatedRectangle(new Rectangle( (int)absolutePosition.X, (int)absolutePosition.Y, this.Texture.Width, this.Texture.Height), this.GetAbsoluteRotation());
-                this.ColisionRectangle.Origin = new Vector2(this.Texture.Width / 2f, this.Texture.Height / 2f);
+                this.ColisionRectangle = new RotatedRectangle(new Rectangle((int)absolutePosition.X, (int)absolutePosition.Y, this.Texture.Width, this.Texture.Height), this.GetAbsoluteRotation())
+                                             {
+                                                 Origin = new Vector2(this.Texture.Width / 2f, this.Texture.Height / 2f)
+                                             };
             }
         }
 
-        public RotatedRectangle ColisionRectangle { get; set; }
+        public RotatedRectangle ColisionRectangle { get; private set; }
 
         public Vector2 Scale
         {
