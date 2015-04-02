@@ -50,6 +50,8 @@
     <Compile Include="Helpers\RandomGeneratorHelper.cs" />
     <Compile Include="Helpers\TextureGenerator.cs" />
     <Compile Include="Layout\CollisionObject.cs" />
+    <Compile Include="Layout\ParallaxLayer.cs" />
+    <Compile Include="Layout\ParallaxObject.cs" />
     <Compile Include="Movement\IMovementPattern.cs" />
     <Compile Include="Movement\LinearMovement.cs" />
     <Compile Include="Particles\BurstParticleEmmiter.cs" />

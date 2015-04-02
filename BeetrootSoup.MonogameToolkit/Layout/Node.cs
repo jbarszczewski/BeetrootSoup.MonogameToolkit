@@ -1,13 +1,10 @@
 ﻿namespace BeetrootSoup.MonogameToolkit.Layout
 {
-    using BeetrootSoup.MonogameToolkit.Movement;
-
-    using Microsoft.Xna.Framework;
     using System;
     using System.Collections.Generic;
-
-    using Newtonsoft.Json;
-
+    using BeetrootSoup.MonogameToolkit.Movement;
+    using Microsoft.Xna.Framework;
+    
     public abstract class Node
     {
         public Vector2 RelativePosition;
