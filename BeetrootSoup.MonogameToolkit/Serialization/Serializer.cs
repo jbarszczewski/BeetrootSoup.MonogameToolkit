@@ -42,14 +42,7 @@
                                  LinearVelocity = node.LinearVelocity,
                                  AngularVelocity = node.AngularVelocity
                              };
-
-            if (node is Scene)
-            {
-                var sceneNode = node as Scene;
-                result.Type = "Scene";
-                result.Name = sceneNode.SceneName;
-            }
-
+                                
             if (node is Layer)
             {
                 var layerNode = node as Layer;
@@ -92,9 +85,6 @@
             Node result;
             switch (nodeDefinition.Type)
             {
-                case "Scene":
-                    result = new Scene(nodeDefinition.Name);
-                    break;
                 case "Layer":
                     var resultLayer = new Layer(SpriteBatch);
                     foreach (string effectName in nodeDefinition.Effects)
