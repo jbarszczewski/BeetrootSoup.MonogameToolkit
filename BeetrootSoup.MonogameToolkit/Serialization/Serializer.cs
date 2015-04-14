@@ -102,8 +102,8 @@
                     resultSprite.Scale = nodeDefinition.Scale;
                     result = resultSprite;
                     break;
-                case "ComplexObject":
-                    result = new ComplexObject();
+                case "Node":
+                    result = new Node();
                     break;
                 default:
                     throw new TypeInitializationException(nodeDefinition.Type, null);

@@ -5,7 +5,7 @@
     using BeetrootSoup.MonogameToolkit.Movement;
     using Microsoft.Xna.Framework;
     
-    public abstract class Node
+    public class Node
     {
         public Vector2 RelativePosition;
 
@@ -22,7 +22,7 @@
         public Node Owner { get; set; }
         public IList<Node> Nodes { get; private set; }
 
-        protected Node()
+        public Node()
         {
             this.Nodes = new List<Node>();
             this.RelativePosition = Vector2.Zero;

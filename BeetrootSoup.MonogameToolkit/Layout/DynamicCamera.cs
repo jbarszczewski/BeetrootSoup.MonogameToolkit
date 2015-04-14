@@ -11,11 +11,11 @@
         }
 
         // Centered Position of the Camera in pixels.
-        public Vector2 Position { get; private set; }
+        public Vector2 Position { get; set; }
         // Current Zoom level with 1.0f being standard
-        public float Zoom { get; private set; }
+        public float Zoom { get; set; }
         // Current Rotation amount with 0.0f being standard orientation
-        public float Rotation { get; private set; }
+        public float Rotation { get; set; }
 
         // Height and width of the viewport window which we need to adjust
         // any time the player resizes the game window.
