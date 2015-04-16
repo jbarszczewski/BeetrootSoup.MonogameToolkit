@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BeetrootSoup.MonogameToolkit.Layout
 {
-    public class CollisionObject : Node
+    public class CollisionNode : Node
     {
         public RotatedRectangle ColisionRectangle { get; set; }
     }

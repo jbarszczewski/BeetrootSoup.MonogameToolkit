@@ -5,14 +5,14 @@ namespace BeetrootSoup.MonogameToolkit.Layout
     using Microsoft.Xna.Framework.Graphics;
     using System.Collections.Generic;
 
-    public class Layer : Node
+    public class LayerNode : Node
     {
         private readonly SpriteBatch spriteBatch;
         internal readonly IList<Effect> Effects;
 
         public DynamicCamera Camera { get; set; }
 
-        public Layer(SpriteBatch spriteBatch)
+        public LayerNode(SpriteBatch spriteBatch)
         {
             this.spriteBatch = spriteBatch;
             this.Effects = new List<Effect>();

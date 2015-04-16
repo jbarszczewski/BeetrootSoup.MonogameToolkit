@@ -4,7 +4,7 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
-    public class ParallaxObject : Node
+    public class ParallaxNode : Node
     {
         private readonly SpriteBatch spriteBatch;
 
@@ -12,7 +12,7 @@
 
         public Vector2 PositionOffset;
 
-        public ParallaxObject(SpriteBatch spriteBatch)
+        public ParallaxNode(SpriteBatch spriteBatch)
         {
             this.spriteBatch = spriteBatch;
             this.ParallaxLayers = new List<ParallaxLayer>();

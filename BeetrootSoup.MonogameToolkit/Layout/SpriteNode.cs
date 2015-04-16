@@ -6,7 +6,7 @@
 
     using Newtonsoft.Json;
 
-    public class SpriteObject : Node
+    public class SpriteNode : Node
     {
         private readonly SpriteBatch spriteBatch;
 
@@ -14,7 +14,7 @@
 
         private Vector2 scale;
 
-        public SpriteObject(SpriteBatch spriteBatch)
+        public SpriteNode(SpriteBatch spriteBatch)
         {
             this.spriteBatch = spriteBatch;
             this.Scale = Vector2.One;
