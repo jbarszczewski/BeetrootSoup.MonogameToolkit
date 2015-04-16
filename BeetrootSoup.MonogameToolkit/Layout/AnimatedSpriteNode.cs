@@ -46,21 +46,21 @@ namespace BeetrootSoup.MonogameToolkit.Layout
                 {
                     this.CurrentFrameX = 0;
                     this.CurrentFrameY++;
-                    if (this.CurrentFrameY == this.YFramesCount) 
+                    if (this.CurrentFrameY == this.YFramesCount)
                         this.CurrentFrameY = 0;
                 }
             }
 
             base.Update(gameTime);
         }
-        
+
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Draw(
                 texture: this.Texture,
                 position: base.GetAbsolutePosition(),
-                sourceRectangle: new Rectangle(this.FrameWidth* this.CurrentFrameX, this.FrameHeight * this.CurrentFrameY, this.FrameWidth, this.FrameHeight),
-                origin: new Vector2(this.Texture.Width / 2f, this.Texture.Height / 2f),
+                sourceRectangle: new Rectangle(this.FrameWidth * this.CurrentFrameX, this.FrameHeight * this.CurrentFrameY, this.FrameWidth, this.FrameHeight),
+                origin: new Vector2(this.FrameWidth / 2f, this.FrameHeight / 2f),
                 rotation: base.GetAbsoluteRotation(),
                 scale: this.Scale);
 

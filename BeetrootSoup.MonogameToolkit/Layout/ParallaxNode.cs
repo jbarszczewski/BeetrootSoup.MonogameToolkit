@@ -23,7 +23,7 @@
         {
             foreach (ParallaxLayer parallaxLayer in this.ParallaxLayers)
             {
-                spriteBatch.Draw(
+              spriteBatch.Draw(
               texture: parallaxLayer.Texture,
               position: base.GetAbsolutePosition() + parallaxLayer.PositionOffset + this.PositionOffset * parallaxLayer.OffsetFactor,
               rotation: base.GetAbsoluteRotation(),

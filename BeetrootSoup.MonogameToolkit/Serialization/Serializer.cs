@@ -46,7 +46,7 @@
             if (node is LayerNode)
             {
                 var layerNode = node as LayerNode;
-                result.Type = "Layer";
+                result.Type = "LayerNode";
                 foreach (Effect effect in layerNode.Effects)
                 {
                     result.Effects.Add(effect.Name);
@@ -56,7 +56,7 @@
             if (node is SpriteNode)
             {
                 var spriteNode = node as SpriteNode;
-                result.Type = "SpriteObject";
+                result.Type = "SpriteNode";
                 result.Texture = spriteNode.Texture.Name;
                 result.Scale = spriteNode.Scale;
             }
@@ -85,7 +85,7 @@
             Node result;
             switch (nodeDefinition.Type)
             {
-                case "Layer":
+                case "LayerNode":
                     var resultLayer = new LayerNode(SpriteBatch);
                     foreach (string effectName in nodeDefinition.Effects)
                     {
@@ -95,7 +95,7 @@
 
                     result = resultLayer;
                     break;
-                case "SpriteObject":
+                case "SpriteNode":
                     var resultSprite = new SpriteNode(SpriteBatch);
                     if (Textures.ContainsKey(nodeDefinition.Texture))
                         resultSprite.Texture = Textures[nodeDefinition.Texture];
