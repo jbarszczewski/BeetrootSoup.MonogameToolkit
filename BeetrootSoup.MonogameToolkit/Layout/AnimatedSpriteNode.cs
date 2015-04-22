@@ -14,6 +14,7 @@ namespace BeetrootSoup.MonogameToolkit.Layout
         {
             this.spriteBatch = spriteBatch;
             this.Scale = Vector2.One;
+            this.AnimationEnabled = true;
         }
 
         //[JsonConverter(typeof(TextureSerializationConverter))]
@@ -35,19 +36,24 @@ namespace BeetrootSoup.MonogameToolkit.Layout
 
         public double AnimationFrameTime { get; set; }
 
+        public bool AnimationEnabled { get; set; }
+
         public override void Update(GameTime gameTime)
         {
-            this.animationTimer += gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (this.animationTimer > this.AnimationFrameTime)
+            if (this.AnimationEnabled)
             {
-                this.animationTimer = 0;
-                this.CurrentFrameX++;
-                if (this.CurrentFrameX == this.XFramesCount)
+                this.animationTimer += gameTime.ElapsedGameTime.TotalMilliseconds;
+                if (this.animationTimer > this.AnimationFrameTime)
                 {
-                    this.CurrentFrameX = 0;
-                    this.CurrentFrameY++;
-                    if (this.CurrentFrameY == this.YFramesCount)
-                        this.CurrentFrameY = 0;
+                    this.animationTimer = 0;
+                    this.CurrentFrameX++;
+                    if (this.CurrentFrameX == this.XFramesCount)
+                    {
+                        this.CurrentFrameX = 0;
+                        this.CurrentFrameY++;
+                        if (this.CurrentFrameY == this.YFramesCount)
+                            this.CurrentFrameY = 0;
+                    }
                 }
             }
 
